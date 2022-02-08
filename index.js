@@ -19,9 +19,8 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let votingAge = 18
+console.log(votingAge >= 18);
 /*
 Task 1b - Values
 
@@ -47,6 +46,8 @@ Do the following:
 
    HINT: look up the Number method
 */
+let year = "1999";
+console.log(Number(year));
 
 
 
@@ -60,11 +61,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return (a * b)
 }
-
-
+console.log(multiply(3,2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -76,10 +76,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears){
+  return humanYears * 7;
 }
-
+console.log(dogYears(3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -109,8 +109,8 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(pounds, age){
+  if(hungryDog === )
 }
 
 
