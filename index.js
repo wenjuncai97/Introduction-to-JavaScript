@@ -12,7 +12,7 @@ returns a value, that value will be logged to the console.  An example of this w
 
 /*
 Task 1a - Voting Age
-
+`
 Do the following:   
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
@@ -31,10 +31,14 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
+let food = 'pizza';
+let topping = 'pepperoni';
+if(topping === 'pepperoni') {
+  food = 'pepperoni pizza';
+} else {
+  food = 'pizza';
+}
+console.log(food)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -46,7 +50,7 @@ Do the following:
 
    HINT: look up the Number method
 */
-let year = "1999";
+const year = "1999";
 console.log(Number(year));
 
 
@@ -110,8 +114,26 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 */  
 
 function hungryDog(pounds, age){
-  if(hungryDog === )
+  if(pounds <= 5 && age >= 1) {
+    return pounds * .05;
+  } else if(pounds >= 6 && pounds <= 10 && age >= 1) {
+    return pounds * .04;
+  } else if(pounds >= 11 && pounds <= 15 && age >= 1) {
+    return pounds * .03;
+  } else if(pounds > 15 && age >= 1) {
+    return pounds * .02;
+  } else if(age < 1 && age >= 0.583) {
+    return pounds * .04;
+  } else if(age < 0.583 && age >= 0.333){
+    return pounds * .05;
+  } else if(age < 0.333 && age >= 0.166) {
+    return pounds * .1;
+  } else{
+    return 'Error';
+  }
 }
+
+console.log(hungryDog(15, 1));
 
 
 
