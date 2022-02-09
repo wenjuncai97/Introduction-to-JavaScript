@@ -136,7 +136,6 @@ function hungryDog(pounds, age){
 console.log(hungryDog(15, 1));
 
 
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -160,10 +159,35 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.random();
+if(computer <= 0.34) {
+  computer = 'rock';
+} else if(computer <= 0.67) {
+  computer = 'paper';
+} else if(computer > 0.67) {
+  computer = 'scissors';
 }
 
+function game(user, computer){
+  if(user === computer) {
+    return `it's a tie`;
+  } else if(user === 'rock' && computer === 'scissors') {
+    return `you win!`;
+  } else if(user === 'rock' && computer === 'paper') {
+    return `you lose!`;
+  } else if(user === 'scissors' && computer === 'rock') {
+    return `you lose!`;
+  } else if(user === 'scissors' && computer === 'paper') {
+    return `you win!`;
+  } else if(user === 'paper' && computer === 'scissors') {
+    return `you lose!`
+  } else if(user === 'paper' && computer === 'rock') {
+    return `you win!`;
+  } else {
+    return `Error!`;
+  }
+}
+console.log(game('scissors', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -177,10 +201,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * .621371;
 }
 
+console.log(miles(12));
 
 
 //Task 5b - Feet to CM
@@ -191,10 +216,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
-
+ console.log(feet(60.98));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -207,9 +232,13 @@ Using the annoyingSong function below do the following:
     "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+  for(let i = number; i > 0; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall`;
+  }
 }
+
+console.log(annoyingSong(8));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -227,10 +256,19 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(num){
+  if(num >= 90 && num <= 100){
+    return 'you got an A';
+} else if(num >= 80 && num <=89){
+    return 'you got a B';
+} else if(num >= 70 && num <= 79){
+    return 'you got a C';
+} else if(num >= 60 && num <= 69){
+    return 'you got a D';
+} else {
+  return 'you got an F';
+  }
 }
-
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -244,7 +282,12 @@ Using the vowelCounter function below do the following:
 HINT - you may need to study tomorrow's content on arrays 
 HINT - try looking up the .includes() method
 */
+const vowel = ['a', 'e', 'i', 'o', 'u'];
+const vowels = vowel.toLowerCase;
 
+function countVowels(str) {
+  
+}
 
 function vowelCounter(/*add your code here*/) {
   /*add your code here*/
